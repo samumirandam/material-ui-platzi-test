@@ -6,11 +6,14 @@ const PrincipalInformation = ({ userState }) => {
 
   return (
     <>
-      <Stack>
-        <Typography>{name}</Typography>
-        <Typography>{created_at}</Typography>
+      <Stack
+        direction="row"
+        sx={{ justifyContent: "space-between", alignItems: "center" }}
+      >
+        <Typography variant="h4">{name}</Typography>
+        <Typography variant="subtitle2">{created_at}</Typography>
       </Stack>
-      <Typography>{login}</Typography>
+      <Typography variant="caption">{`@${login}`}</Typography>
     </>
   );
 };

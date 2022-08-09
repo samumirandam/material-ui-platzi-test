@@ -8,15 +8,15 @@ const Description = ({ userState }) => {
 
   return (
     <>
-      <Stack>
+      <Stack sx={{ justifyContent: "center" }}>
         {bio === null ? (
-          <Typography>
+          <Typography variant="body1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab id ipsum
             recusandae dolorem totam quo voluptatibus. Atque ad labore quo
             veniam animi modi, amet a, ut ducimus rem adipisci nulla.
           </Typography>
         ) : (
-          <Typography>{bio}</Typography>
+          <Typography variant="body1">{bio}</Typography>
         )}
       </Stack>
       <PaperInformation userState={userState} />

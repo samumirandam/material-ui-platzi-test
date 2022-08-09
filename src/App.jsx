@@ -38,9 +38,8 @@ const App = () => {
       sx={{
         background: "whitesmoke",
         width: "80vw",
-        height: "500px",
         borderRadius: "16px",
-        marginTop: "40px",
+        margin: "40px auto",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

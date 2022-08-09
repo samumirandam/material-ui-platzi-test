@@ -10,10 +10,10 @@ const LocationInformation = ({ userState }) => {
   const { location, twitter_username, blog, company } = userState;
 
   return (
-    <Grid container>
+    <Grid container spacing={2} sx={{ paddingTop: "16px" }}>
       {location && (
         <Grid item xs={6}>
-          <Stack>
+          <Stack direction="row" spacing={1}>
             <LocationOnIcon />
             <Typography>{location}</Typography>
           </Stack>
@@ -21,7 +21,7 @@ const LocationInformation = ({ userState }) => {
       )}
       {twitter_username && (
         <Grid item xs={6}>
-          <Stack>
+          <Stack direction="row" spacing={1}>
             <TwitterIcon />
             <Typography>{twitter_username}</Typography>
           </Stack>
@@ -29,15 +29,17 @@ const LocationInformation = ({ userState }) => {
       )}
       {blog && (
         <Grid item xs={6}>
-          <Stack>
+          <Stack direction="row" spacing={1}>
             <LanguageIcon />
-            <Typography>{blog}</Typography>
+            <a target="_blank" href={blog}>
+              <Typography>{blog}</Typography>
+            </a>
           </Stack>
         </Grid>
       )}
       {company && (
         <Grid item xs={6}>
-          <Stack>
+          <Stack direction="row" spacing={1}>
             <BusinessIcon />
             <Typography>{company}</Typography>
           </Stack>

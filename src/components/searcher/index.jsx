@@ -13,12 +13,19 @@ const Searcher = ({ setInputUser }) => {
     setInputUser(valueInput);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      setInputUser(valueInput);
+    }
+  };
+
   return (
     <Stack
       direction="row"
       sx={{
         marginTop: "32px",
-        width: "80%",
+        width: "100%",
+        position: "relative",
       }}
     >
       <TextField
@@ -28,11 +35,16 @@ const Searcher = ({ setInputUser }) => {
         size="small"
         value={valueInput}
         onChange={onSearchValueChange}
+        onKeyDown={handleKeyPress}
         sx={{
-          width: "90%",
+          width: "100%",
         }}
       />
-      <IconButton size="small" onClick={handleSubmit} sx={{ left: "-45px" }}>
+      <IconButton
+        size="small"
+        onClick={handleSubmit}
+        sx={{ position: "absolute", right: "8px", top: "4px" }}
+      >
         <SearchIcon />
       </IconButton>
     </Stack>
